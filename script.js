@@ -7,8 +7,8 @@ let projects = [
     {
         name: "Projet Vecteur26",
         body: `Vecteur 26 est une agence web dédiée à la création de sites vitrines sur mesure,
-               performants et ultra-rapides. Code sur mesure et optimisé, sans CMS lourd
-               ni constructeur de pages (pas de WordPress ni Wix).`,
+            performants et ultra-rapides. Code sur mesure et optimisé, sans CMS lourd
+            ni constructeur de pages (pas de WordPress ni Wix).`,
         lien: "https://vecteur26.fr"
     }
 ];
