@@ -10,9 +10,9 @@ Site : https://mistergaming111-netizen.github.io/Yboost-Portfolio/
 - Compétences (réseau, système, cyber)
 - Expériences (mes stages)
 - Projets
-- Formulaire de contact
+- Formulaire de contact (pas encore relié à la base)
 
-Les projets et les expériences ne sont pas écrits dans le HTML : ils sont chargés depuis Supabase au chargement de la page. Pour en ajouter un, il suffit d'ajouter une ligne dans la table.
+Les projets et les expériences ne sont pas écrits dans le HTML : ils sont récupérés depuis Supabase à l'ouverture de la page. Pour en ajouter, il suffit d'ajouter une ligne dans la table correspondante.
 
 ## Technos
 
@@ -25,6 +25,7 @@ Les projets et les expériences ne sont pas écrits dans le HTML : ils sont char
 
 ```
 git clone https://github.com/mistergaming111-netizen/Yboost-Portfolio.git
+cd Yboost-Portfolio
 ```
 
 Créer un fichier `config.js` à la racine (il n'est pas sur le repo) :
