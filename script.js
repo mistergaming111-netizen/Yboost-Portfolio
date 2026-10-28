@@ -1,5 +1,5 @@
-const supabaseUrl = "https://vzhnxexygxlnyomheqss.supabase.co/rest/v1";
-const apikey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ6aG54ZXh5Z3hsbnlvbWhlcXNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMxODU4MzgsImV4cCI6MjEwODc2MTgzOH0.3CxLBFJVH5UZfYLeK5eTTA363AVq5qs92HBEGmiRhVk";
+const supabaseUrl = window.APP_CONFIG.SUPABASE_URL + "/rest/v1";
+const apikey = window.APP_CONFIG.SUPABASE_KEY;
 
 let listeProjets = document.getElementById("liste-projets");
 let listeStages = document.getElementById("mesStages");
