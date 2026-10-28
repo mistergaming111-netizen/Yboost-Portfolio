@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<!-- data-bs-theme="dark" : active le thème sombre de Bootstrap sur toute la page -->
+
 <html lang="fr" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cal L · CV Cybersécurité</title>
 
-  <!-- Bootstrap (le CSS déjà fait) -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons (les petites icônes) -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <!-- Mon CSS à moi (toujours en dernier) -->
+  
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ===== MENU ===== -->
-  <!-- sticky-top : le menu reste collé en haut quand on descend -->
   <nav class="navbar navbar-expand-md sticky-top border-bottom">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">
         <i class="bi bi-terminal-fill text-accent"></i> Cal L
       </a>
 
-      <!-- Bouton "burger" : visible seulement sur téléphone -->
+      
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Les liens : cachés dans le burger sur téléphone -->
+      
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto align-items-md-center">
           <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
@@ -42,7 +40,7 @@
     </div>
   </nav>
 
-  <!-- ===== EN-TÊTE / À PROPOS ===== -->
+  
   <header class="hero py-5">
     <div class="container py-5 text-center">
       <span class="badge rounded-pill bg-accent-soft mb-3">
@@ -60,11 +58,11 @@
 
   <div class="container py-5">
 
-    <!-- ===== COMPÉTENCES ===== -->
+    
     <section id="competences" class="mb-5">
       <h2 class="section-title mb-4"><i class="bi bi-cpu"></i> Compétences</h2>
 
-      <!-- row + col-md-4 : 3 colonnes côte à côte, empilées sur téléphone -->
+      
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100 card-hover">
@@ -95,13 +93,13 @@
       </div>
     </section>
 
-    <!-- ===== EXPÉRIENCES : l'accordéon ===== -->
+    
     <section id="experiences" class="mb-5">
       <h2 class="section-title mb-4"><i class="bi bi-briefcase"></i> Expériences</h2>
 
       <div class="accordion" id="mesStages">
 
-        <!-- STAGE 1 -->
+        
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#stage">
@@ -122,7 +120,7 @@
           </div>
         </div>
 
-        <!-- STAGE 2 -->
+        
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#stage2">
@@ -147,14 +145,14 @@
       </div>
     </section>
 
-    <!-- ===== PROJETS ===== -->
+    
     <section id="projets" class="mb-5">
       <h2 class="section-title mb-4"><i class="bi bi-code-slash"></i> Projets</h2>
 
-      <!-- 2 projets côte à côte sur ordi (col-md-6 = 6 colonnes sur 12) -->
+      
       <div class="row g-4">
 
-        <!-- PROJET 1 -->
+        
         <div class="col-md-6">
           <div class="card h-100 card-hover">
             <div class="card-body d-flex flex-column">
@@ -164,7 +162,7 @@
                 <span class="badge bg-info text-dark">Go</span>
                 <span class="badge bg-info text-dark">Terminal</span>
               </div>
-              <!-- mt-auto : pousse le bouton tout en bas de la carte -->
+              
               <a href="https://github.com/ItsForTheVibes/Projet-Red-Mr-Ybot" target="_blank" class="btn btn-accent mt-auto">
                 <i class="bi bi-github"></i> Voir le projet
               </a>
@@ -172,7 +170,7 @@
           </div>
         </div>
 
-        <!-- PROJET 2 -->
+        
         <div class="col-md-6">
           <div class="card h-100 card-hover">
             <div class="card-body d-flex flex-column">
@@ -200,14 +198,14 @@
       </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    
     <section id="contact">
       <h2 class="section-title mb-4"><i class="bi bi-envelope"></i> Contact</h2>
 
       <div class="card col-lg-8 mx-auto">
         <div class="card-body p-4">
           <form>
-            <!-- label : le texte au-dessus du champ -->
+            
             <label class="form-label">Nom</label>
             <input type="text" class="form-control mb-3" placeholder="Ton nom">
 
@@ -217,7 +215,7 @@
             <label class="form-label">Message</label>
             <textarea class="form-control mb-3" rows="4" placeholder="Ton message"></textarea>
 
-            <!-- w-100 : bouton sur toute la largeur -->
+            
             <button type="submit" class="btn btn-accent w-100">
               <i class="bi bi-send"></i> Envoyer
             </button>
@@ -228,12 +226,12 @@
 
   </div>
 
-  <!-- ===== PIED DE PAGE ===== -->
+
   <footer class="border-top py-4 text-center text-body-secondary">
     © 2026 Cal L · Fait avec Bootstrap
   </footer>
 
-  <!-- Bootstrap JS (fait marcher l'accordéon et le menu burger) -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
