@@ -1,0 +1,38 @@
+# Nom du workflow (il s'affiche dans l'onglet Actions de GitHub)
+name: Deploy
+
+# QUAND le workflow se lance : à chaque push sur la branche main
+on:
+  push:
+    branches: [main]
+
+# Les droits dont il a besoin pour publier sur GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    # La machine (un Linux) que GitHub prête pour faire le travail
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # CE QUE fait le workflow, étape par étape
+    steps:
+      # 1. Récupère ton code depuis le repo
+      - uses: actions/checkout@v4
+
+      # 2. Prépare GitHub Pages
+      - uses: actions/configure-pages@v5
+
+      # 3. Emballe les fichiers du site (le "." = tout le dossier)
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      # 4. Publie le site en ligne
+      - id: deployment
+        uses: actions/deploy-pages@v4
