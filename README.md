@@ -2,6 +2,8 @@
 
 Mon CV en ligne, fait pendant le Yboost B1 à Ynov.
 
+Site : https://mistergaming111-netizen.github.io/Yboost-Portfolio/
+
 ## Contenu
 
 - Présentation
@@ -10,20 +12,32 @@ Mon CV en ligne, fait pendant le Yboost B1 à Ynov.
 - Projets
 - Formulaire de contact
 
+Les projets et les expériences ne sont pas écrits dans le HTML : ils sont chargés depuis Supabase au chargement de la page. Pour en ajouter un, il suffit d'ajouter une ligne dans la table.
+
 ## Technos
 
-- HTML / CSS
+- HTML / CSS / JavaScript
 - Bootstrap 5
-- GitHub Pages pour l'hébergement
+- Supabase (tables `projets` et `experiences`, RLS en lecture seule)
+- GitHub Actions + GitHub Pages pour le déploiement
 
 ## Lancer le projet
-
-Cloner le repo puis ouvrir `index.html` avec Live Server dans VS Code.
 
 ```
 git clone https://github.com/mistergaming111-netizen/Yboost-Portfolio.git
 ```
 
-## Lien du site
+Créer un fichier `config.js` à la racine (il n'est pas sur le repo) :
 
-https://mistergaming111-netizen.github.io/Yboost-Portfolio/#projets
+```js
+window.APP_CONFIG = {
+    SUPABASE_URL: "url du projet supabase",
+    SUPABASE_KEY: "clé anon"
+};
+```
+
+Puis ouvrir `index.html` avec Live Server dans VS Code.
+
+## Déploiement
+
+Chaque push sur `main` lance le workflow `.github/workflows/deploy.yml`, qui crée `config.js` à partir des secrets GitHub (`SUPABASE_URL` et `SUPABASE_KEY`) puis publie le site sur GitHub Pages.
